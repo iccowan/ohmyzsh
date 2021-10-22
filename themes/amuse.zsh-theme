@@ -11,8 +11,8 @@ ZSH_THEME_RUBY_PROMPT_PREFIX="%{$fg_bold[red]%}‹"
 ZSH_THEME_RUBY_PROMPT_SUFFIX="›%{$reset_color%}"
 
 PROMPT='
-%{$fg_bold[green]%}%~%{$reset_color%}$(git_prompt_info) ⌚ %{$fg_bold[red]%}%*%{$reset_color%}
-$ '
+%{$fg_bold[blue]%}%m:%{$fg_bold[green]%}%c%{$reset_color%}$(git_prompt_info)
+$[HISTCMD]$ '
 
 RPROMPT='$(ruby_prompt_info)'
 

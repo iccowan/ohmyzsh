@@ -9,6 +9,7 @@ else
     local user_symbol='$'
 fi
 
+local hist_cmd='$[HISTCMD]'
 local current_dir='%{$terminfo[bold]$fg[blue]%}%~ %{$reset_color%}'
 local git_branch='$(git_prompt_info)'
 local rvm_ruby='$(ruby_prompt_info)'
@@ -16,7 +17,7 @@ local venv_prompt='$(virtualenv_prompt_info)'
 
 ZSH_THEME_RVM_PROMPT_OPTIONS="i v g"
 
-PROMPT="╭─${user_host}${current_dir}${rvm_ruby}${git_branch}${venv_prompt}
+PROMPT="╭─${hist_cmd}${current_dir}${rvm_ruby}${git_branch}${venv_prompt}
 ╰─%B${user_symbol}%b "
 RPROMPT="%B${return_code}%b"
 
